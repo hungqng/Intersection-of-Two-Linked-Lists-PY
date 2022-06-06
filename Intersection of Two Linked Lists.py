@@ -33,3 +33,10 @@ class Solution:
             l1 = l1.next if l1 else headB
             l2 = l2.next if l2 else headA
         return l1
+
+        # Solution 2
+        a, b = headA, headB
+        while (a != b):
+            a = headB if not a else a.next
+            b = headA if not b else b.next
+        return a
